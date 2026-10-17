@@ -1,0 +1,11 @@
+import {build} from 'esbuild';
+import {readFileSync,writeFileSync,readdirSync,mkdirSync} from 'node:fs';
+const manifest=JSON.parse(readFileSync('.openai/hosting.json','utf8'));
+mkdirSync('dist/server',{recursive:true});mkdirSync('dist/.openai',{recursive:true});mkdirSync('.local',{recursive:true});
+const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8'};
+const assets=Object.fromEntries(readdirSync('public').filter(n=>/\.(html|js|css)$/.test(n)).map(name=>['/'+name,{body:readFileSync('public/'+name,'utf8'),type:types[name.slice(name.lastIndexOf('.'))]}]));
+const source=`import worker from '../src/worker.js';const assets=${JSON.stringify(assets)};export default {fetch(request,env,ctx){const ASSETS={fetch(req){const path=new URL(req.url).pathname;const asset=assets[path==='/'?'/index.html':path];return asset?new Response(asset.body,{headers:{'Content-Type':asset.type,'Cache-Control':'no-cache'}}):new Response('Not found',{status:404});}};return worker.fetch(request,{...env,ORIGINALS:env.BUCKET,ASSETS},ctx);},scheduled:worker.scheduled};`;
+writeFileSync('.local/entry.js',source);
+await build({entryPoints:['.local/entry.js'],outfile:'dist/server/index.js',bundle:true,format:'esm',platform:'browser',target:'es2022',minify:true,legalComments:'none'});
+writeFileSync('dist/.openai/hosting.json',JSON.stringify(manifest,null,2));
+console.log('Built Worker with embedded UI assets.');

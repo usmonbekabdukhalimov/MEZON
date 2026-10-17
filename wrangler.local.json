@@ -1,0 +1,1 @@
+{"name":"mezon-local","main":"dist/server/index.js","compatibility_date":"2026-10-18","d1_databases":[{"binding":"DB","database_name":"mezon-local","database_id":"00000000-0000-0000-0000-000000000001","migrations_dir":"migrations"}],"r2_buckets":[{"binding":"BUCKET","bucket_name":"mezon-local"}]}

@@ -1,0 +1,152 @@
+{
+  "checked_on": "2026-10-18",
+  "method": "openpyxl 3.1.5 read-only inspection and Decimal sums; SHA-256 of original bytes",
+  "files": [
+    {
+      "file": "лапша.xlsx",
+      "bytes": 5373,
+      "sha256": "522178503fe7e3db87caccf6eb1d66b63a2f56f399cf2b89151f0635ec0a0ff5",
+      "sheets": [
+        "Sheet"
+      ],
+      "sheet": "Sheet",
+      "range": "A1:H17",
+      "header_row": 1,
+      "headers": [
+        "ИД заказа",
+        "Дата доставки",
+        "Торговый представитель",
+        "Рабочая зона",
+        "Клиент",
+        "Сумма",
+        "Тип цены",
+        "Статус"
+      ],
+      "data_rows": 16,
+      "unique_source_ids": 16,
+      "duplicate_id_rows": 0,
+      "summa_total": "9379200.0",
+      "nonpositive_amount_rows": 0,
+      "fractional_amount_rows": 0,
+      "distinct_agent_labels": 4,
+      "distinct_client_labels": 16,
+      "repeated_agent_client_rows": 0,
+      "missing_required_rows": 0,
+      "formula_cells": [],
+      "date_column_types": {
+        "Дата доставки": {
+          "str": 16
+        }
+      },
+      "date_number_formats": {
+        "Дата доставки": [
+          "dd.MM.yyyy HH:mm:ss"
+        ]
+      },
+      "merged_ranges": []
+    },
+    {
+      "file": "н.медов.xlsx",
+      "bytes": 36501,
+      "sha256": "4e45f464199b49ba40d21bc5f1bdcd28a24e67b04f162d1ea2aa76274b8f15fe",
+      "sheets": [
+        "Sheet1"
+      ],
+      "sheet": "Sheet1",
+      "range": "A1:N26",
+      "header_row": 2,
+      "headers": [
+        null,
+        "№",
+        "Тип",
+        "Дата заявки",
+        "Дата отгрузки",
+        "Клиент",
+        "Кол-во",
+        "Объем",
+        "Сумма",
+        "Тип цены",
+        "Статус",
+        "Состояние",
+        "Агент",
+        "Город"
+      ],
+      "data_rows": 24,
+      "unique_source_ids": 24,
+      "duplicate_id_rows": 0,
+      "summa_total": "34799690",
+      "nonpositive_amount_rows": 0,
+      "fractional_amount_rows": 0,
+      "distinct_agent_labels": 4,
+      "distinct_client_labels": 24,
+      "repeated_agent_client_rows": 0,
+      "missing_required_rows": 0,
+      "formula_cells": [],
+      "date_column_types": {
+        "Дата заявки": {
+          "str": 24
+        },
+        "Дата отгрузки": {
+          "float": 24
+        }
+      },
+      "date_number_formats": {
+        "Дата заявки": [
+          "General"
+        ],
+        "Дата отгрузки": [
+          "0.00"
+        ]
+      },
+      "merged_ranges": [
+        "A1:N1"
+      ]
+    },
+    {
+      "file": "крембер.xlsx",
+      "bytes": 7229,
+      "sha256": "516b9aa7af783f32b40cdbf9c3ce6f8c7e48882a80d4563c5cdbc0a8e808259d",
+      "sheets": [
+        "Sheet"
+      ],
+      "sheet": "Sheet",
+      "range": "A1:H43",
+      "header_row": 1,
+      "headers": [
+        "ИД заказа",
+        "Дата и время создания",
+        "Торговый представитель",
+        "Рабочая зона",
+        "Клиент",
+        "Сумма",
+        "Тип цены",
+        "Статус"
+      ],
+      "data_rows": 42,
+      "unique_source_ids": 42,
+      "duplicate_id_rows": 0,
+      "summa_total": "188622994.0",
+      "nonpositive_amount_rows": 0,
+      "fractional_amount_rows": 0,
+      "distinct_agent_labels": 4,
+      "distinct_client_labels": 42,
+      "repeated_agent_client_rows": 0,
+      "missing_required_rows": 0,
+      "formula_cells": [],
+      "date_column_types": {
+        "Дата и время создания": {
+          "str": 42
+        }
+      },
+      "date_number_formats": {
+        "Дата и время создания": [
+          "dd.MM.yyyy HH:mm:ss"
+        ]
+      },
+      "merged_ranges": []
+    }
+  ],
+  "all_data_rows": 82,
+  "cross_file_repeated_id_count": 0,
+  "combined_summa_total": "232801884.0"
+}
